@@ -1,3 +1,8 @@
+Get the gist of this:
+   https://gist.github.com/Hendoe/f40285375b1ac2bd5a0700607a24a573
+
+// ALL BELOW COMES FROM CLONE //
+
 # Spaced repetition API!
 
 ## Local dev setup
