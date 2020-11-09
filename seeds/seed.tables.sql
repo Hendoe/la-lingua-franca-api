@@ -7,15 +7,15 @@ TRUNCATE
 
 INSERT INTO "user" ("id", "username", "name", "password")
 VALUES
+  -- (
+  --   1,
+  --   "admin",
+  --   "Dunder Mifflin Admin",
+  --   -- password = "pass"
+  --   "$2a$10$fCWkaGbt7ZErxaxclioLteLUgg4Q3Rp09WW0s/wSLxDKYsaGYUpjG"
+  -- ),
   (
     1,
-    "admin",
-    "Dunder Mifflin Admin",
-    -- password = "pass"
-    "$2a$10$fCWkaGbt7ZErxaxclioLteLUgg4Q3Rp09WW0s/wSLxDKYsaGYUpjG"
-  ),
-  (
-    2,
     "user",
     "spaced",
     "pap"
@@ -23,27 +23,27 @@ VALUES
 
 INSERT INTO "language" ("id", "name", "user_id")
 VALUES
-  (1, 'French', 1),
-  (2, 'German', 2);
+  -- (1, 'French', 1),
+  (1, 'German', 1);
 
 INSERT INTO "word" ("id", "language_id", "original", "translation", "next")
 VALUES
-  (1, 1, 'entraine toi', 'practice', 2),
-  (2, 1, 'bonjour', 'hello', 3),
-  (3, 1, 'maison', 'house', 4),
-  (4, 1, 'développeur', 'developer', 5),
-  (5, 1, 'traduire', 'translate', 6),
-  (6, 1, 'incroyable', 'amazing', 7),
-  (7, 1, 'chien', 'dog', 8),
-  (8, 1, 'tiger', 'tiger', null),
-  (9, 2, 'die berge', 'the mountains', 10),
-  (10, 2, 'hallo', 'hello', 11),
-  (11, 2, 'schloss', 'castle', 12),
-  (12, 2, 'gut', 'good', 13),
-  (13, 2, 'sprechen', 'speak', 14),
-  (14, 2, 'ja', 'yes', 15),
-  (15, 2, 'die sterne', 'the stars', 16),
-  (16, 2, 'alt', 'old', null);
+  -- (1, 1, 'entraine toi', 'practice', 2),
+  -- (2, 1, 'bonjour', 'hello', 3),
+  -- (3, 1, 'maison', 'house', 4),
+  -- (4, 1, 'développeur', 'developer', 5),
+  -- (5, 1, 'traduire', 'translate', 6),
+  -- (6, 1, 'incroyable', 'amazing', 7),
+  -- (7, 1, 'chien', 'dog', 8),
+  -- (8, 1, 'chat', 'cat', null),
+  (1, 1, 'die berge', 'the mountains', 2),
+  (2, 1, 'hallo', 'hello', 3),
+  (3, 1, 'schloss', 'castle', 4),
+  (4, 1, 'gut', 'good', 5),
+  (5, 1, 'sprechen', 'speak', 6),
+  (6, 1, 'ja', 'yes', 7),
+  (7, 1, 'die sterne', 'the stars', 8),
+  (8, 1, 'tiger', 'tiger', null);
 
 UPDATE "language" SET head = 1 WHERE id = 1;
 

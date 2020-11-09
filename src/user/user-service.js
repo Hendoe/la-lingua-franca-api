@@ -1,6 +1,6 @@
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 
-const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]+/
+const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]+/;
 
 const UserService = {
   hasUserWithUserName(db, username) {
@@ -46,7 +46,8 @@ const UserService = {
       const [languageId] = await trx
         .into('language')
         .insert([
-          { name: 'French', user_id },
+          // { name: 'French', user_id },
+          { name: 'German', user_id },
         ], ['id'])
 
       // when inserting words,
@@ -58,14 +59,22 @@ const UserService = {
         .first()
 
       const languageWords = [
-        ['entraine toi', 'practice', 2],
-        ['bonjour', 'hello', 3],
-        ['maison', 'house', 4],
-        ['développeur', 'developer', 5],
-        ['traduire', 'translate', 6],
-        ['incroyable', 'amazing', 7],
-        ['chien', 'dog', 8],
-        ['chat', 'cat', null],
+        // ['entraine toi', 'practice', 2],
+        // ['bonjour', 'hello', 3],
+        // ['maison', 'house', 4],
+        // ['développeur', 'developer', 5],
+        // ['traduire', 'translate', 6],
+        // ['incroyable', 'amazing', 7],
+        // ['chien', 'dog', 8],
+        // ['chat', 'cat', null],
+        ['die berge', 'the mountains', 2],
+        ['hallo', 'hello', 3],
+        ['schloss', 'castle', 4],
+        ['gut', 'good', 5],
+        ['sprechen', 'speak', 6],
+        ['ja', 'yes', 7],
+        ['die sterne', 'the stars', 8],
+        ['tiger', 'tiger', null]
       ]
 
       const [languageHeadId] = await trx
@@ -87,8 +96,8 @@ const UserService = {
         .update({
           head: languageHeadId.id,
         })
-    })
+    });
   },
-}
+};
 
-module.exports = UserService
+module.exports = UserService;
