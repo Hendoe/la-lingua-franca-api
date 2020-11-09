@@ -1,7 +1,7 @@
 module.exports = {
   PORT: process.env.PORT || 8000,
   NODE_ENV: process.env.NODE_ENV || 'development',
-  DATABASE_URL: process.env.DATABASE_URL|| 'postgresql://spaced:pap@db:5432/spaced',
+  DATABASE_URL: process.env.DATABASE_URL|| 'postgresql://spaced:pap@127.0.0.1:5432/spaced',
   JWT_SECRET: process.env.JWT_SECRET || 'change-this-secret',
   JWT_EXPIRY: process.env.JWT_EXPIRY || '3h',
 }
