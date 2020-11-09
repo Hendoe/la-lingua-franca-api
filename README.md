@@ -1,6 +1,9 @@
 Get the gist of this:
    https://gist.github.com/Hendoe/f40285375b1ac2bd5a0700607a24a573
 
+Here's the Trello:
+    https://trello.com/b/tfe3HZBJ/build-server
+
 // ALL BELOW COMES FROM CLONE //
 
 # Spaced repetition API!
